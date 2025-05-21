@@ -1,6 +1,6 @@
 # Nutrition Tracker
 
-Description (N/A)
+An app that helps a user to keep track of their daily nutrition through manually logging.
 
 ## Project Overview
 
@@ -27,4 +27,4 @@ N/A
 
 MIT License
 
---
+---
