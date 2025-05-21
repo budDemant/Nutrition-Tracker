@@ -23,8 +23,15 @@ if response.status_code == 200:
     print("Search results for:", SEARCH_TERM)
     for food in data.get("foods", []): # if "foods" missing, return empty list
         print(f"- {food.get('description')} (FDC ID: {food.get('fdcId')})")
+        for nutrient in food.get("foodNutrients", []):
+            if nutrient.get("nutrientName") == "Protein":
+                amount = nutrient.get("value")
+                unit = nutrient.get("unitName")
+                print(f"  Protein: {amount} {unit}")
 else:
     print("Error:", response.status_code, response.text)
+
+
 
 # response = requests.get('https://developer.nrel.gov/api/alt-fuel-stations/v1.json?limit=1', headers=headers)
 
