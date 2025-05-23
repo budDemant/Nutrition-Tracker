@@ -2,8 +2,8 @@
 erDiagram
     USERS {
         int id PK
-        string email -- unique
-        string username -- unique
+        string email
+        string username
         string password
     }
     FOODS {
@@ -45,3 +45,4 @@ erDiagram
     USERS ||--o{ GOALS : sets
     NUTRIENTS ||--o{ GOALS : for
 ```
+**Note**: username and email should be unique
